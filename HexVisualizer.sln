@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.9.34728.123
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HexVisualizer", "HexVisualizer\HexVisualizer.csproj", "{2608EF50-4E97-41E3-B23B-0B527B339859}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyTestConsole", "MyTestConsole\MyTestConsole.csproj", "{54076768-FD76-485B-B4DC-309706331809}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2608EF50-4E97-41E3-B23B-0B527B339859}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2608EF50-4E97-41E3-B23B-0B527B339859}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2608EF50-4E97-41E3-B23B-0B527B339859}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2608EF50-4E97-41E3-B23B-0B527B339859}.Release|Any CPU.Build.0 = Release|Any CPU
+		{54076768-FD76-485B-B4DC-309706331809}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{54076768-FD76-485B-B4DC-309706331809}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{54076768-FD76-485B-B4DC-309706331809}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{54076768-FD76-485B-B4DC-309706331809}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {510581E8-3131-4307-B63B-3603D8D1712F}
+	EndGlobalSection
+EndGlobal
