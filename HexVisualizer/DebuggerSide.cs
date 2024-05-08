@@ -17,8 +17,9 @@ Description = "Byte Array Hex Visualizer")]
 namespace HexVisualizer {
     public class DebuggerSide : DialogDebuggerVisualizer {
         public DebuggerSide() : base(FormatterPolicy.Legacy) {
-            // nothing else to do
-        }
+        //public DebuggerSide() : base(FormatterPolicy.NewtonsoftJson) {
+                // nothing else to do
+            }
 
         protected override void Show(IDialogVisualizerService windowService, IVisualizerObjectProvider objectProvider) {
             try {
@@ -29,10 +30,13 @@ namespace HexVisualizer {
                     BinaryFormatter bf = new BinaryFormatter();
                     bArray = bf.Deserialize(opData) as byte[];
                 }
+                
                 HexViewer hexViewer = new HexViewer {
-                    Text = "Array size is " + bArray.Length
+                    Text = "Byte Viewer"
                 };
+                hexViewer.DrawBytes(bArray);
                 windowService.ShowDialog(hexViewer);
+                
             }
             catch (Exception ex) {
                 MessageBox.Show("Error in visualizer: " + ex.Message);
