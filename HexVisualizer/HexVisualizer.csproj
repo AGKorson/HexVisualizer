@@ -47,18 +47,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DebuggerSide.cs" />
-    <Compile Include="HexViewer.cs">
+    <Compile Include="DebuggerHexVisualizer.cs" />
+    <Compile Include="HexVisualizerForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="HexViewer.Designer.cs">
-      <DependentUpon>HexViewer.cs</DependentUpon>
+    <Compile Include="HexVisualizerForm.Designer.cs">
+      <DependentUpon>HexVisualizerForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="HexViewer.resx">
-      <DependentUpon>HexViewer.cs</DependentUpon>
+    <EmbeddedResource Include="HexVisualizerForm.resx">
+      <DependentUpon>HexVisualizerForm.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

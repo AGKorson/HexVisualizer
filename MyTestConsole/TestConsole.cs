@@ -1,12 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Runtime.InteropServices;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using HexVisualizer;
+﻿using HexVisualizer;
 using Microsoft.VisualStudio.DebuggerVisualizers;
+using System.Windows.Forms;
 
 namespace MyTestConsole {
     internal class TestConsole {
@@ -18,7 +12,7 @@ namespace MyTestConsole {
             }
             byte[] cTest = new byte[100];
 
-            VisualizerDevelopmentHost visualizerHost = new VisualizerDevelopmentHost(null, typeof(DebuggerSide));
+            VisualizerDevelopmentHost visualizerHost = new VisualizerDevelopmentHost(null, typeof(DebuggerHexVisualizer));
             //visualizerHost.ShowVisualizer();
             MessageBox.Show("stop here, test debugger");
         }
