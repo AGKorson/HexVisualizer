@@ -1,0 +1,2 @@
+# Byte Array Hex Visualizer
+A custom data visualizer that displays byte arrays in the traditional hex editor format. Array data are displayed as hex values in a 16 byte wide grid. The array values are also displayed as characters using code page 437 (from the original MSDOS character code page).
