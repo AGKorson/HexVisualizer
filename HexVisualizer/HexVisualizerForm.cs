@@ -51,8 +51,6 @@ namespace HexVisualizer {
             HexDisplay.Height = (((data.Length - 1) / 16) + 1) * HexDisplay.Font.Height + 2;
             OffsetDisplay.Height = HexDisplay.Height;
             CharDisplay.Height = HexDisplay.Height;
-            CharDisplay.AutoScrollOffset = new Point(999999999, 999999999);
-            HexDisplay.AutoScrollOffset = new Point(999999999, 999999999);
             CharDisplay.SelectionLength = 0;
             CharDisplay.SelectionStart = 0;
             HexDisplay.SelectionLength = 0;
@@ -76,7 +74,7 @@ namespace HexVisualizer {
         private void richHex_MouseMove(object sender, MouseEventArgs e) {
             // update selection in txtDisplay to match selection in richHex
             CharDisplay.SelectionStart = HexDisplayToCharDisplay(HexDisplay.SelectionStart);
-            if (HexDisplay.SelectionLength > 0 ) {
+            if (HexDisplay.SelectionLength > 0) {
                 CharDisplay.SelectionLength = HexDisplayToCharDisplay(HexDisplay.SelectionStart + HexDisplay.SelectionLength) - CharDisplay.SelectionStart;
             }
             else {
@@ -174,7 +172,16 @@ namespace HexVisualizer {
                     System.Threading.Thread.Sleep(1);
                     panel1.VerticalScroll.Value = newval;
                 }
+                HexDisplay.AutoScrollOffset = new Point(0, -panel1.VerticalScroll.Value);
+                OffsetDisplay.AutoScrollOffset = new Point(0, -panel1.VerticalScroll.Value);
+                CharDisplay.AutoScrollOffset = new Point(0, -panel1.VerticalScroll.Value);
             }
+        }
+
+        private void panel1_Scroll(object sender, ScrollEventArgs e) {
+            HexDisplay.AutoScrollOffset = new Point(0, -panel1.VerticalScroll.Value);
+            OffsetDisplay.AutoScrollOffset = new Point(0, -panel1.VerticalScroll.Value);
+            CharDisplay.AutoScrollOffset = new Point(0, -panel1.VerticalScroll.Value);
         }
     }
 }

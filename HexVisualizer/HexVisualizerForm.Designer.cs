@@ -25,12 +25,12 @@
         private void InitializeComponent() {
             this.Header = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.statusStrip1 = new System.Windows.Forms.StatusStrip();
-            this.statOffset = new System.Windows.Forms.ToolStripStatusLabel();
-            this.statLength = new System.Windows.Forms.ToolStripStatusLabel();
             this.CharDisplay = new System.Windows.Forms.TextBox();
             this.HexDisplay = new System.Windows.Forms.RichTextBox();
             this.OffsetDisplay = new System.Windows.Forms.TextBox();
+            this.statusStrip1 = new System.Windows.Forms.StatusStrip();
+            this.statOffset = new System.Windows.Forms.ToolStripStatusLabel();
+            this.statLength = new System.Windows.Forms.ToolStripStatusLabel();
             this.LoadingPanel = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.progressBar1 = new System.Windows.Forms.ProgressBar();
@@ -71,37 +71,8 @@
             this.panel1.Size = new System.Drawing.Size(1404, 553);
             this.panel1.TabIndex = 6;
             this.panel1.Visible = false;
+            this.panel1.Scroll += new System.Windows.Forms.ScrollEventHandler(this.panel1_Scroll);
             this.panel1.MouseWheel += new System.Windows.Forms.MouseEventHandler(this.HexVisualizer_MouseWheel);
-            // 
-            // statusStrip1
-            // 
-            this.statusStrip1.ImageScalingSize = new System.Drawing.Size(32, 32);
-            this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.statOffset,
-            this.statLength});
-            this.statusStrip1.Location = new System.Drawing.Point(0, 587);
-            this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Padding = new System.Windows.Forms.Padding(2, 0, 28, 0);
-            this.statusStrip1.Size = new System.Drawing.Size(1404, 42);
-            this.statusStrip1.TabIndex = 2;
-            this.statusStrip1.Text = "statusStrip1";
-            this.statusStrip1.DoubleClick += new System.EventHandler(this.status_DoubleClick);
-            // 
-            // statOffset
-            // 
-            this.statOffset.BackColor = System.Drawing.SystemColors.Control;
-            this.statOffset.Name = "statOffset";
-            this.statOffset.Size = new System.Drawing.Size(146, 32);
-            this.statOffset.Text = "Offset(h): 0  ";
-            this.statOffset.DoubleClick += new System.EventHandler(this.status_DoubleClick);
-            // 
-            // statLength
-            // 
-            this.statLength.BackColor = System.Drawing.SystemColors.Control;
-            this.statLength.Name = "statLength";
-            this.statLength.Size = new System.Drawing.Size(155, 32);
-            this.statLength.Text = "Length(h): 0  ";
-            this.statLength.DoubleClick += new System.EventHandler(this.status_DoubleClick);
             // 
             // CharDisplay
             // 
@@ -160,6 +131,36 @@
             this.OffsetDisplay.TabStop = false;
             this.OffsetDisplay.Leave += new System.EventHandler(this.OffsetDisplay_Leave);
             this.OffsetDisplay.MouseWheel += new System.Windows.Forms.MouseEventHandler(this.HexVisualizer_MouseWheel);
+            // 
+            // statusStrip1
+            // 
+            this.statusStrip1.ImageScalingSize = new System.Drawing.Size(32, 32);
+            this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.statOffset,
+            this.statLength});
+            this.statusStrip1.Location = new System.Drawing.Point(0, 587);
+            this.statusStrip1.Name = "statusStrip1";
+            this.statusStrip1.Padding = new System.Windows.Forms.Padding(2, 0, 28, 0);
+            this.statusStrip1.Size = new System.Drawing.Size(1404, 42);
+            this.statusStrip1.TabIndex = 2;
+            this.statusStrip1.Text = "statusStrip1";
+            this.statusStrip1.DoubleClick += new System.EventHandler(this.status_DoubleClick);
+            // 
+            // statOffset
+            // 
+            this.statOffset.BackColor = System.Drawing.SystemColors.Control;
+            this.statOffset.Name = "statOffset";
+            this.statOffset.Size = new System.Drawing.Size(146, 32);
+            this.statOffset.Text = "Offset(h): 0  ";
+            this.statOffset.DoubleClick += new System.EventHandler(this.status_DoubleClick);
+            // 
+            // statLength
+            // 
+            this.statLength.BackColor = System.Drawing.SystemColors.Control;
+            this.statLength.Name = "statLength";
+            this.statLength.Size = new System.Drawing.Size(155, 32);
+            this.statLength.Text = "Length(h): 0  ";
+            this.statLength.DoubleClick += new System.EventHandler(this.status_DoubleClick);
             // 
             // LoadingPanel
             // 
