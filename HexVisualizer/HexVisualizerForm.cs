@@ -107,8 +107,10 @@ namespace HexVisualizer {
         }
         int HexDisplayToCharDisplay(int hexpos) {
             int row = hexpos / 50;
-            int col = hexpos % 50;
-            if (col > 0 && col < 24) {
+            int col = hexpos % 50 - 1;
+            if (col < 0) {
+                col = 0;
+            else if (col > 0 && col < 24) {
                 col = (col + 2) / 3;
             }
             else if (col > 23) {
