@@ -110,6 +110,7 @@ namespace HexVisualizer {
             int col = hexpos % 50 - 1;
             if (col < 0) {
                 col = 0;
+            }
             else if (col > 0 && col < 24) {
                 col = (col + 2) / 3;
             }
